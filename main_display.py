@@ -2,8 +2,21 @@ from tkinter import ttk
 from tkinter import *
 
 root = Tk()
-root.geometry("560x380")
+
 root.title("Lyric Getter")
+
+# Center 
+root_width = 560
+root_height = 380
+
+screen_width = root.winfo_screenwidth()
+screen_height = root.winfo_screenheight()
+
+x = (screen_width / 2) - (root_width / 2)
+y= (screen_height / 2) - (root_height / 2)
+
+root.geometry(f'{root_width}x{root_height}+{int(x)}+{int(y)}')
+
 
 label = Label(root, text="Hi, please enter a lyric", font=("Courier 22"))
 label.pack(pady=25)
